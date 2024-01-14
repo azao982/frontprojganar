@@ -1,0 +1,38 @@
+
+.btn{
+    background-color:#abc1e0;
+    border-radius: 30%;
+}
+.btn-secondary1{
+    color: black;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #searchInput {
+    margin-right: 10px; /* Ajustez la valeur de la marge selon vos besoins */
+  }
+  .btn{
+    color: #0f2641;
+    font-weight: 600;
+
+  }
+  .modal-body{
+    background-color: #abc1e0;
+  }
+  body {
+    background-image: url('/assets/app.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }  
+  .kk:hover{
+background-color: rgb(73, 118, 241);;
+  }
+.d{
+  padding-left: 3px;
+}

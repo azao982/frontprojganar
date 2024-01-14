@@ -1,0 +1,59 @@
+<body><div class="container">
+<br>
+    <h1 class="my-1 xb" style="color: black;">Inscription</h1>
+    <br><div class="row justify-content-left">
+      <div class="col-md-6">
+        <div class="card custom-bg-color">
+          <div class="card-body">
+            <form [formGroup]="registerForm">
+              <div class="form-group text-center">
+                <label for="nom" class="font-weight-bold"><i class="fa fa-user-circle" aria-hidden="true"></i>Nom:</label>
+                <br><br>
+                <div class="mx-auto" style="width: fit-content;">
+                  <input type="text" class="form-control" id="userName" placeholder="Entrez votre nom" formControlName="userName">
+                </div>
+              </div>
+              <br>
+              <div class="form-group text-center">
+                <label for="fullName" class="font-weight-bold"><i class="fas fa-user"></i>Adresse email :</label>
+                <br><br>
+                <div class="mx-auto" style="width: fit-content;">
+                  <input type="email" class="form-control" id="emailId" placeholder="Entrez votre email" formControlName="emailId">
+                </div>
+              </div>
+              <br>
+              <div class="form-group text-center">
+                <label for="password" class="font-weight-bold"><i class="fas fa-lock"></i> Mot de passe :</label>
+                <br><br>
+                <div class="mx-auto" style="width: fit-content;">
+                  <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" formControlName="password">
+                </div>
+              </div>
+              <br>
+              <div class="form-group text-center">
+                <label for="role" class="font-weight-bold"><i class="fas fa-users"></i> Rôle :</label>
+                <br><br>
+                <div class="mx-auto" style="width: fit-content;">
+                  <label class="radio-inline">
+                    <input type="radio" formControlName="role" value="etudiant"> Étudiant
+                  </label>
+                   <label class="radio-inline">
+                    <input type="radio" formControlName="role" value="enseignant"> Enseignant
+                  </label>
+                </div>
+                </div>
+              <br>
+              <div class="form-group text-center">
+                <button type="button" (click)="onRegister()" class="btn btn-dark" [disabled]="registerForm.invalid">
+                  <i class="fas fa-user-plus
+                  "></i>
+                  S'inscrire
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>

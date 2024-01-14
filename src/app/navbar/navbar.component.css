@@ -1,0 +1,30 @@
+.bg-custom {
+    background-color:#bdcfe7;
+  }
+  .xyxb{
+    margin-top:10px;
+  }
+  .btn{
+    color:black;
+    border: 2px solid black;
+    border-radius:10%;
+  }
+  img{
+    border-radius:30px;
+  }
+  .x{
+    margin-right: 40px; 
+
+    
+  }
+  a{
+   font-weight: 600;
+   font-size: large;
+  }
+  .nav-link{
+    padding :1px 1px;
+  }
+
+  
+  
+   

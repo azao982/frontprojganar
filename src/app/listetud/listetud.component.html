@@ -1,0 +1,82 @@
+<body><!-- Votre liste de cours existante -->
+<br>
+<div class="search-container">
+  <label for="searchInput">Search: </label>
+  <input type="text" id="searchInput" [(ngModel)]="searchKeyword" />
+  <button class="btn btn-primary" (click)="searchCours()">
+    <i class="fa fa-search"></i>Search
+  </button>
+</div>
+<br>
+<div class="container">
+  <h2 class="text-center" style="color:black">Liste des cours</h2>
+  <br>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered mx-auto">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" style="text-align: center;">Nom du cours</th>
+          <th scope="col" style="text-align: center;">Description</th>
+          <th scope="col" style="text-align: center;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cour of (searchResults.length ? searchResults : cours)">
+          <td>{{ cour.nomDuCours }}</td>
+          <td>{{ cour.description }}</td>
+          <td>
+            <div class="text-center">
+              <button class="btn kk c" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="showDetails(cour)">
+                <i class="fas fa-info-circle"></i>  Voir détails
+              
+              </button>
+              <!-- Ajouter le bouton "Modifier" -->
+              
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<button type="button " class="btn btn-primary d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fa-solid fa-comment"></i> Commenter</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-detailscours [selectedCourse]="selectedCourse" class="details-section"></app-detailscours>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- Exemple dans le modèle -->
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Commentaire<i class="fa fa-comment"></i></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form >
+          <textarea  class="form-control" [(ngModel)]="comForm.commentaire" name="com" id="com" cols="30" rows="10"></textarea>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="ajoutercom()">Ajouter</button>
+        </div>
+      </div>
+    </div>
+  </div>

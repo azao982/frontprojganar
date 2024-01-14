@@ -1,0 +1,28 @@
+.img {
+  background-image: url('src/assets/bhy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: black;
+}
+
+.ab {
+  color: rgb(2, 2, 77);
+  text-align: left; /* Ajout de la propriété pour centrer le texte horizontalement */
+  align-items: center; /* Ajout de la propriété pour centrer le texte verticalement */
+  padding-top: 10px; /* Ajustement de la valeur de padding-top (vous pouvez ajuster selon vos besoins) */
+  padding-left: 50px;
+  font-weight: bold;
+}
+.ac{
+  color: rgb(2, 2, 77);
+  text-align: left; /* Ajout de la propriété pour centrer le texte horizontalement */
+  align-items: center;
+  padding-top: 300px;
+  padding-left: 120px;
+  margin-bottom: 10px;
+  font-weight: bold;
+
+  
+}
